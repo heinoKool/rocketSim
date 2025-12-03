@@ -368,7 +368,7 @@ function runCountdown(onFinish, missionName){
     consoleEl.textContent += '['+(missionName||'Mission')+'] T-Minus '+i+'\n';
     if(i===0){
       clearInterval(interval);
-      consoleEl.textContent += '['+(missionName||'Mission')+'] Rakete startet!\n';
+      consoleEl.textContent += 'Rakete: ' + (missionName||'Mission') + ' startet - Ciao Welt\n';
       onFinish();
     }
     i--;
