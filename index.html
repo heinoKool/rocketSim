@@ -47,13 +47,11 @@
 
       // Startmethode
       void start() {
-        if (fuel > <span class="drop" data-slot="fuelThresh"></span>) {
-          if (name != null) {
-            for (int i = <span class="drop" data-slot="countStart"></span>; i >= 0; i--) {
-              System.out.println("T-Minus " + i);
-            }
-            System.out.println("Rakete: " + name + " startet - Ciao Welt");
+        if (fuel > <span class="drop" data-slot="fuelThresh"></span> && <span class="drop" data-slot="nameNotNull"></span>) {
+          for (int i = <span class="drop" data-slot="countStart"></span>; i >= 0; i--) {
+            System.out.println("T-Minus " + i);
           }
+          System.out.println("Rakete: " + name + " startet - Ciao Welt");
         } else {
           System.out.println("Start nicht möglich.");
         }

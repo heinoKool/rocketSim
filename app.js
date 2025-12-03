@@ -71,11 +71,12 @@ const REQUIRED = {
   amountVar: 'amount',
   fuelFull: '100',
   fuelThresh: '80',
-  countStart: '10'
+  countStart: '10',
+  nameNotNull: 'name != null'
 };
 
 const DECOYS = [
-  'int rName', 'String name', 'fuel', 'amount + fuel', '50', '75', 'fuel > 50', 'fuel >= 80', '15', '5', 'rName()', 'null', 'String', 'new Rakete', 'i++'
+  'int rName', 'String name', 'fuel', 'amount + fuel', '50', '75', 'fuel > 50', 'fuel >= 80', '15', '5', 'rName()', 'null', 'String', 'new Rakete', 'i++', 'name == null'
 ];
 
 function buildTokens(){
