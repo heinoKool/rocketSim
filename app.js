@@ -454,6 +454,12 @@ launchBtn.addEventListener('click', ()=>{
   const missionName = document.getElementById('rocketName').value.trim() || 'Mission';
   const modalMissionName = document.getElementById('modalMissionName');
   if(modalMissionName) modalMissionName.textContent = missionName;
+  // Update modal header info (name + fuel)
+  const simNameEl = document.getElementById('modalRocketName');
+  const simFuelEl = document.getElementById('modalFuel');
+  const fuelPct = (mode==='full') ? 100 : Math.max(0, Math.min(100, isFinite(amount)?amount:0));
+  if(simNameEl) simNameEl.textContent = 'Rakete: ' + missionName;
+  if(simFuelEl) simFuelEl.textContent = 'Fuel: ' + fuelPct + '%';
   const successful = (mode==='full') || (amount>80);
   consoleEl.textContent='';
   if(successful){
